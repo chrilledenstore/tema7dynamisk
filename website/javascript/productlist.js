@@ -22,7 +22,7 @@ function showProducts(data) {
           <a href="produkt.html">Read More</a>
         </article>`
     )
-    .join(``);
+    .join("");
 
   productlist.innerHTML = markup;
 }
