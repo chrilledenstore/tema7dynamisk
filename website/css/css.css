@@ -32,6 +32,7 @@ li {
 .main_header h1 {
     font-size: 2em;
     margin: 0;
+    margin-top: 3px;
 }
 
 .main_header h1 span {
@@ -40,16 +41,16 @@ li {
     color: red;
 }
 
-.main_header nav {
-    /* display: flex; */
+.nav_links {
     display: none;
     font-size: 0.5em;
     color: var(--txtcolor);
-    padding-left: 12%;
-    justify-content: left;
-    column-gap: 1em;
     text-decoration: underline;
 }
+
+
+
+
 
 
 .category_list_container {
@@ -270,13 +271,13 @@ text-decoration: none;
         justify-content: space-between;
     }
 
-    .main_header nav {
+    .nav_links {
         display: flex;
         font-size: 1rem;
+        justify-content: right;
         color: var(--txtcolor);
         column-gap: 1em;
         text-decoration: none;
-        padding-top: 5px;
     }
 
     .product_view_main {
