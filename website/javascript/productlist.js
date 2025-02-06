@@ -2,9 +2,30 @@ const mycategory = new URLSearchParams(window.location.search).get("category");
 
 const productlist = document.querySelector(".product_list");
 
+document.querySelectorAll("button").forEach((knap) => knap.addEventListener("click", showFiltered));
+
+let allData;
+
 fetch(`https://kea-alt-del.dk/t7/api/products?category=${mycategory}`)
   .then((response) => response.json())
   .then((data) => showProducts(data));
+
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${mycategory}`)
+  .then((response) => response.json())
+  .then((json) => {
+    allData = json;
+    showProducts(allData);
+  });
+
+function showFiltered() {
+  const filter = this.dataset.gender;
+  if (filter == "All") {
+    showProducts(allData);
+  } else {
+    fraction = allData.filter((product) => product.gender === filter);
+    showProducts(fraction);
+  }
+}
 
 function showProducts(data) {
   const markup = data

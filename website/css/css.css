@@ -116,8 +116,26 @@ li {
     color: var(--txtcolor);
     font-size: 1.5em;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
+.brand_name article {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+
+.brand_name article button {
+    width: 90px;
+    padding: 12px;
+    background-color: crimson;
+    border-color: rgba(220, 20, 60, 0);
+}
+
+.brand_name article button:hover {
+    background-color: rgb(190, 18, 52);
+}
 .product_list {
     display: grid;
     gap: 3em;
@@ -285,7 +303,6 @@ text-decoration: none;
     .purchase_box h3 {
         font-size: 2rem;
     }
-
 
 .product_list {
     display: grid;
